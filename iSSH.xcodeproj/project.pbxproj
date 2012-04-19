@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		FA77C2890FD6943C00E6B7F8 /* Distribution */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FA77C2960FD6949300E6B7F8 /* Build configuration list for PBXAggregateTarget "Distribution" */;
+			buildPhases = (
+				FA77C2880FD6943C00E6B7F8 /* ShellScript */,
+			);
+			dependencies = (
+				FA77C28F0FD6945000E6B7F8 /* PBXTargetDependency */,
+			);
+			name = Distribution;
+			productName = Distribution;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		FA1C17960DC13FD000F94BEF /* ssh_config in Resources */ = {isa = PBXBuildFile; fileRef = FA1C17950DC13FD000F94BEF /* ssh_config */; };
+		FA475A590DB66ED2003F1AE2 /* MSController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA475A580DB66ED2003F1AE2 /* MSController.m */; };
+		FA4955350E96CA42000169B7 /* iSSH.icns in Resources */ = {isa = PBXBuildFile; fileRef = FA4955340E96CA42000169B7 /* iSSH.icns */; };
+		FA77C2DF0FD695E400E6B7F8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA77C2DE0FD695E400E6B7F8 /* Sparkle.framework */; };
+		FA77C2E90FD695E600E6B7F8 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA77C2DE0FD695E400E6B7F8 /* Sparkle.framework */; };
+		FA77C3090FD6961800E6B7F8 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = FA77C3080FD6961800E6B7F8 /* dsa_pub.pem */; };
+		FA82CB740DE09ADD00CA5D62 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA82CB730DE09ADD00CA5D62 /* Security.framework */; };
+		FA82CBF30DE0ADAA00CA5D62 /* EMKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA82CBF00DE0ADAA00CA5D62 /* EMKeychainItem.m */; };
+		FA82CBF40DE0ADAA00CA5D62 /* EMKeychainProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA82CBF20DE0ADAA00CA5D62 /* EMKeychainProxy.m */; };
+		FA82CC8E0DE0BD3000CA5D62 /* getPass.sh in Resources */ = {isa = PBXBuildFile; fileRef = FA82CC8D0DE0BD3000CA5D62 /* getPass.sh */; };
+		FA9EDCD90DDD1CE400E6B483 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
+		FA9EDDA60DDD1D1000E6B483 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		FA9EDDA80DDD1D2C00E6B483 /* AGProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9EDDA70DDD1D1E00E6B483 /* AGProcess.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA9EDDAB0DDD1D4900E6B483 /* AGProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9EDDAA0DDD1D4900E6B483 /* AGProcess.m */; };
+		FA9EDDAF0DDD1D6F00E6B483 /* AGProcess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9EDC4D0DDD1C4000E6B483 /* AGProcess.framework */; };
+		FA9EDDB10DDD1D9D00E6B483 /* AGProcess.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA9EDC4D0DDD1C4000E6B483 /* AGProcess.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA77C28E0FD6945000E6B7F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = iSSH;
+		};
+		FA7B2BCB0DEDB79E0047AA6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA9EDC4C0DDD1C4000E6B483;
+			remoteInfo = AGProcess;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA4FBB950DDCF34500303BB6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA77C2E90FD695E600E6B7F8 /* Sparkle.framework in CopyFiles */,
+				FA9EDDB10DDD1D9D00E6B483 /* AGProcess.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* iSSH_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iSSH_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* iSSH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSSH.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1C17950DC13FD000F94BEF /* ssh_config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ssh_config; sourceTree = "<group>"; };
+		FA475A570DB66ED2003F1AE2 /* MSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSController.h; sourceTree = "<group>"; };
+		FA475A580DB66ED2003F1AE2 /* MSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSController.m; sourceTree = "<group>"; };
+		FA4955340E96CA42000169B7 /* iSSH.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iSSH.icns; sourceTree = "<group>"; };
+		FA77C2DE0FD695E400E6B7F8 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		FA77C3080FD6961800E6B7F8 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		FA82CB730DE09ADD00CA5D62 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FA82CBEF0DE0ADAA00CA5D62 /* EMKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMKeychainItem.h; sourceTree = "<group>"; };
+		FA82CBF00DE0ADAA00CA5D62 /* EMKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMKeychainItem.m; sourceTree = "<group>"; };
+		FA82CBF10DE0ADAA00CA5D62 /* EMKeychainProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMKeychainProxy.h; sourceTree = "<group>"; };
+		FA82CBF20DE0ADAA00CA5D62 /* EMKeychainProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMKeychainProxy.m; sourceTree = "<group>"; };
+		FA82CC8D0DE0BD3000CA5D62 /* getPass.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = getPass.sh; sourceTree = "<group>"; };
+		FA9EDC4D0DDD1C4000E6B483 /* AGProcess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AGProcess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA9EDDA70DDD1D1E00E6B483 /* AGProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProcess.h; sourceTree = "<group>"; };
+		FA9EDDAA0DDD1D4900E6B483 /* AGProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGProcess.m; sourceTree = "<group>"; };
+		FA9EDDAD0DDD1D6200E6B483 /* AGProcess_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProcess_Prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				FA9EDDAF0DDD1D6F00E6B483 /* AGProcess.framework in Frameworks */,
+				FA82CB740DE09ADD00CA5D62 /* Security.framework in Frameworks */,
+				FA77C2DF0FD695E400E6B7F8 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA9EDC4B0DDD1C4000E6B483 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9EDCD90DDD1CE400E6B483 /* Foundation.framework in Frameworks */,
+				FA9EDDA60DDD1D1000E6B483 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FA82CBEF0DE0ADAA00CA5D62 /* EMKeychainItem.h */,
+				FA82CBF00DE0ADAA00CA5D62 /* EMKeychainItem.m */,
+				FA82CBF10DE0ADAA00CA5D62 /* EMKeychainProxy.h */,
+				FA82CBF20DE0ADAA00CA5D62 /* EMKeychainProxy.m */,
+				FA9EDDA70DDD1D1E00E6B483 /* AGProcess.h */,
+				FA9EDDAA0DDD1D4900E6B483 /* AGProcess.m */,
+				FA475A570DB66ED2003F1AE2 /* MSController.h */,
+				FA475A580DB66ED2003F1AE2 /* MSController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA77C2DE0FD695E400E6B7F8 /* Sparkle.framework */,
+				FA82CB730DE09ADD00CA5D62 /* Security.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* iSSH.app */,
+				FA9EDC4D0DDD1C4000E6B483 /* AGProcess.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* iSSH */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = iSSH;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FA9EDDAD0DDD1D6200E6B483 /* AGProcess_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* iSSH_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA77C3080FD6961800E6B7F8 /* dsa_pub.pem */,
+				FA4955340E96CA42000169B7 /* iSSH.icns */,
+				FA82CC8D0DE0BD3000CA5D62 /* getPass.sh */,
+				FA1C17950DC13FD000F94BEF /* ssh_config */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FA9EDC480DDD1C4000E6B483 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9EDDA80DDD1D2C00E6B483 /* AGProcess.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* iSSH */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "iSSH" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				FA4FBB950DDCF34500303BB6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA7B2BCC0DEDB79E0047AA6D /* PBXTargetDependency */,
+			);
+			name = iSSH;
+			productInstallPath = "$(HOME)/Applications";
+			productName = iSSH;
+			productReference = 8D1107320486CEB800E47090 /* iSSH.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA9EDC4C0DDD1C4000E6B483 /* AGProcess */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA9EDC510DDD1C4100E6B483 /* Build configuration list for PBXNativeTarget "AGProcess" */;
+			buildPhases = (
+				FA9EDC480DDD1C4000E6B483 /* Headers */,
+				FA9EDC490DDD1C4000E6B483 /* Resources */,
+				FA9EDC4A0DDD1C4000E6B483 /* Sources */,
+				FA9EDC4B0DDD1C4000E6B483 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AGProcess;
+			productName = AGProcess;
+			productReference = FA9EDC4D0DDD1C4000E6B483 /* AGProcess.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iSSH" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* iSSH */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA9EDC4C0DDD1C4000E6B483 /* AGProcess */,
+				8D1107260486CEB800E47090 /* iSSH */,
+				FA77C2890FD6943C00E6B7F8 /* Distribution */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				FA1C17960DC13FD000F94BEF /* ssh_config in Resources */,
+				FA82CC8E0DE0BD3000CA5D62 /* getPass.sh in Resources */,
+				FA4955350E96CA42000169B7 /* iSSH.icns in Resources */,
+				FA77C3090FD6961800E6B7F8 /* dsa_pub.pem in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA9EDC490DDD1C4000E6B483 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA77C2880FD6943C00E6B7F8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "set -o errexit\n\n[ $BUILD_STYLE = Release ] || { echo Distribution target requires \"'Release'\" build style; false; }\n\nVERSION=$(defaults read \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app/Contents/Info\" CFBundleVersion)\nDOWNLOAD_BASE_URL=\"http://www.macserve.org.uk/downloads/issh\"\nRELEASENOTES_URL=\"http://www.macserve.org.uk/projects/issh/changelog/$VERSION/index.html\"\n\nARCHIVE_FILENAME=\"$PROJECT_NAME\"_\"$VERSION.zip\"\nARCHIVE_SOURCE=\"$PROJECT_NAME\"_\"$VERSION-src.zip\"\nDOWNLOAD_URL=\"$DOWNLOAD_BASE_URL/$ARCHIVE_FILENAME\"\n\nWD=$PWD\ncd \"$BUILT_PRODUCTS_DIR\"\nrm -f ../../../\"$PROJECT_NAME\"_*.zip\nrm -f ../../../\"$PROJECT_NAME\"_*-src.zip\nzip -qr \"$ARCHIVE_FILENAME\" \"$PROJECT_NAME.app\"\n\nSIZE=$(stat -f %z \"$ARCHIVE_FILENAME\")\nPUBDATE=$(date +\"%a, %d %b %G %T %z\")\nSIGNATURE=$(\n\t\"$HOME/Documents/Work/Projects/iSSH/SparkleDSA/sign_update.rb\" \"$ARCHIVE_FILENAME\" \"$HOME/Documents/Work/Projects/iSSH/SparkleDSA/dsa_priv.pem\"\n)\n\n[ $SIGNATURE ] || { echo Unable to load signing private key; false; }\n\ncat <<EOF\n\t\t<item>\n\t\t\t<title>iVPN $VERSION</title>\n\t\t\t<sparkle:releaseNotesLink>$RELEASENOTES_URL</sparkle:releaseNotesLink>\n\t\t\t<pubDate>$PUBDATE</pubDate>\n\t\t\t<enclosure\n\t\t\t\turl=\"$DOWNLOAD_URL\"\n\t\t\t\tsparkle:version=\"$VERSION\"\n\t\t\t\ttype=\"application/zip\"\n\t\t\t\tlength=\"$SIZE\"\n\t\t\t\tsparkle:dsaSignature=\"$SIGNATURE\"\n\t\t\t/>\n\t\t</item>\nEOF\n\nmv $ARCHIVE_FILENAME ../../../\ncd ../../../\nrm -rf iSSH/build\n\nzip -qr \"$ARCHIVE_SOURCE\" \"$PROJECT_NAME\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				FA475A590DB66ED2003F1AE2 /* MSController.m in Sources */,
+				FA82CBF30DE0ADAA00CA5D62 /* EMKeychainItem.m in Sources */,
+				FA82CBF40DE0ADAA00CA5D62 /* EMKeychainProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA9EDC4A0DDD1C4000E6B483 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9EDDAB0DDD1D4900E6B483 /* AGProcess.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA77C28F0FD6945000E6B7F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* iSSH */;
+			targetProxy = FA77C28E0FD6945000E6B7F8 /* PBXContainerItemProxy */;
+		};
+		FA7B2BCC0DEDB79E0047AA6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA9EDC4C0DDD1C4000E6B483 /* AGProcess */;
+			targetProxy = FA7B2BCB0DEDB79E0047AA6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iSSH_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = iSSH;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iSSH_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = iSSH;
+				SEPARATE_STRIP = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.4;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.4;
+			};
+			name = Release;
+		};
+		FA77C28A0FD6943D00E6B7F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Distribution;
+			};
+			name = Debug;
+		};
+		FA77C28B0FD6943D00E6B7F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Distribution;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		FA9EDC4F0DDD1C4100E6B483 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				HEADER_SEARCH_PATHS = (
+					.,
+					../include,
+					../../include,
+					include,
+				);
+				INFOPLIST_FILE = "AGProcess-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = AGProcess;
+				VALID_ARCHS = "i386 ppc";
+			};
+			name = Debug;
+		};
+		FA9EDC500DDD1C4100E6B483 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				HEADER_SEARCH_PATHS = (
+					.,
+					../include,
+					../../include,
+					include,
+				);
+				INFOPLIST_FILE = "AGProcess-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = AGProcess;
+				VALID_ARCHS = "i386 ppc";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "iSSH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iSSH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA77C2960FD6949300E6B7F8 /* Build configuration list for PBXAggregateTarget "Distribution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA77C28A0FD6943D00E6B7F8 /* Debug */,
+				FA77C28B0FD6943D00E6B7F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA9EDC510DDD1C4100E6B483 /* Build configuration list for PBXNativeTarget "AGProcess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA9EDC4F0DDD1C4100E6B483 /* Debug */,
+				FA9EDC500DDD1C4100E6B483 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
