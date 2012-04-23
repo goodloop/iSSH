@@ -1,0 +1,3 @@
+ fork project from http://macserve.org.uk/projects/issh/
+
+just don't like the annoying connection broken alert. so remove it , auto reconnect.
