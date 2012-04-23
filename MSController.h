@@ -55,6 +55,7 @@
 	bool running;
 	NSTimer *timer;
 	NSUserDefaults *defaults;
+	bool bNeedReConnect;
 
 }
 

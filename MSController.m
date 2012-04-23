@@ -38,7 +38,7 @@ NSString * const processName = @"ssh";
 
 
 - (void)awakeFromNib {
-	
+	bNeedReConnect = false;
 	if([ self checkStatus ] == 0) {
 		
 		[ self setButtonsConnected ];
@@ -108,13 +108,13 @@ NSString * const processName = @"ssh";
 }
 
 - (IBAction)startCon:(id)sender {
-	
+	bNeedReConnect = true;
     [ self launch ];
 	
 }
 
 - (IBAction)stopCon:(id)sender {
-
+	bNeedReConnect = false;
 	[ self terminate ];
 	
 	[ self setButtonsDisconnected ];
@@ -122,7 +122,7 @@ NSString * const processName = @"ssh";
 }
 
 - (IBAction)stopConQuit:(id)sender {
-
+	bNeedReConnect = false;
 	[ self terminate ];
     [ NSApp terminate: self ];
     
@@ -199,7 +199,7 @@ NSString * const processName = @"ssh";
 
 
 - (void)terminate {
-
+	bNeedReConnect = false;
 	if([ self checkStatus ] == 0) {
 		
 		[ process terminate ];
@@ -231,15 +231,23 @@ NSString * const processName = @"ssh";
 	if([ self checkStatus ] == 1) {
 		
 		[ self setButtonsDisconnected ];
+		if(bNeedReConnect)
+		{
+			NSLog(@"reconnect now!!\n");
+			[self launch];
+		}
+		else {
+			NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+			[ alert addButtonWithTitle: @"OK" ];
+			[ alert setMessageText: @"An error occurred" ];
+			[ alert setInformativeText: @"Check you have entered the settings correctly and that the remote computer is set up correctly" ];
+			[ alert setAlertStyle: NSWarningAlertStyle ];
+			[ alert runModal ];
+			[ timer invalidate ];
+		}
 		
-		NSAlert *alert = [[[NSAlert alloc] init] autorelease];
-		[ alert addButtonWithTitle: @"OK" ];
-		[ alert setMessageText: @"An error occurred" ];
-		[ alert setInformativeText: @"Check you have entered the settings correctly and that the remote computer is set up correctly" ];
-		[ alert setAlertStyle: NSWarningAlertStyle ];
-		[ alert runModal ];
 		
-		[ timer invalidate ];
+		
 		
 	}
 
