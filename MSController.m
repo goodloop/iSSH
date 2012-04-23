@@ -226,7 +226,7 @@ NSString * const processName = @"ssh";
 		return 1;	
 }
 
-- (void)errorCheck:(NSTimer*)timer {
+- (void)errorCheck:(NSTimer*)timerObj {
 	
 	if([ self checkStatus ] == 1) {
 		
@@ -243,7 +243,7 @@ NSString * const processName = @"ssh";
 			[ alert setInformativeText: @"Check you have entered the settings correctly and that the remote computer is set up correctly" ];
 			[ alert setAlertStyle: NSWarningAlertStyle ];
 			[ alert runModal ];
-			[ timer invalidate ];
+			[ timerObj  invalidate ];
 		}
 		
 		
