@@ -660,8 +660,13 @@ AGGetMachTaskEvents(task_t task, int *faults, int *pageins, int *cow_faults, int
 - (id)initWithProcessIdentifier:(int)pid {
 	if (self = [super init]) {
 		process = pid;
-		if (task_for_pid(mach_task_self(), process, &task) != KERN_SUCCESS)
+		int error = 0;
+		error = task_for_pid(mach_task_self(), process, &task);
+		if (error != KERN_SUCCESS)
+		{
+			printf("task_for_pid(%d) return error: %s \n", pid,mach_error_string(error));
 			task = MACH_PORT_NULL;
+		}
 		if ([self state] == AGProcessStateExited) {
 			[self release];
 			return nil;

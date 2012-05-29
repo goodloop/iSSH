@@ -51,6 +51,7 @@
     IBOutlet NSTextField *userName;
 	NSTask *task;
 	AGProcess *process;
+	int processId;
 	NSEnumerator *processEnumerator;
 	bool running;
 	NSTimer *timer;

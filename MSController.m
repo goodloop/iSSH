@@ -39,9 +39,11 @@ NSString * const processName = @"ssh";
 
 - (void)awakeFromNib {
 	bNeedReConnect = false;
+	processId = -1;
 	if([ self checkStatus ] == 0) {
 		
 		[ self setButtonsConnected ];
+		[ self startErrorCheck];
 		
 	}
 }
@@ -134,6 +136,11 @@ NSString * const processName = @"ssh";
 	
 }
 
+- (void)startErrorCheck {
+    timer = [ NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(errorCheck:) userInfo:nil repeats:YES ];
+	[[ NSRunLoop currentRunLoop ] addTimer:timer forMode:NSDefaultRunLoopMode ];
+}
+
 - (void)launch {
 
 	[ progIndicator startAnimation:progIndicator ];
@@ -184,7 +191,7 @@ NSString * const processName = @"ssh";
 	[ arguments addObject: [[NSBundle mainBundle ] pathForResource: @"ssh_config" ofType: @"" ] ];
 	
     [ task setArguments: arguments ];
-	
+	processId = -1;// reset processId
     [ task launch ];
 	NSLog(@"Started Connection");
     
@@ -192,8 +199,7 @@ NSString * const processName = @"ssh";
 	
 	[ progIndicator stopAnimation:progIndicator ];
 	
-	timer = [ NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(errorCheck:) userInfo:nil repeats:YES ];
-	[[ NSRunLoop currentRunLoop ] addTimer:timer forMode:NSDefaultRunLoopMode ];
+	[self startErrorCheck];
 
 }
 
@@ -211,19 +217,55 @@ NSString * const processName = @"ssh";
 }
 
 - (int)checkStatus {
-	
-	processEnumerator = [[ AGProcess allProcesses ] objectEnumerator ];
 	process = nil;
-	
-	while (process = [processEnumerator nextObject]) {
-		
-		if ([processName isEqualToString:[process command]]) {
-			
-			return 0;
-			
+	if(processId == -1)
+	{
+		processEnumerator = [[ AGProcess allProcesses ] objectEnumerator ];
+		//find ssh daemon process id for which we created
+		while (process = [processEnumerator nextObject]) {
+			NSString* name = [process command];
+			NSArray* args = [process arguments];
+			int arg_num = [args count];
+			NSString* arg = nil;
+			if ([processName isEqualToString:name]) {
+				//process name  checked
+				for(int i = 0; i < arg_num; i++)
+				{
+					arg = [args objectAtIndex:i];
+					if([arg isEqualToString:@"-L"] || [arg isEqualToString:@"-D"])
+					{
+						// is a proxy deamon
+						processId = [process processIdentifier];
+						NSString*  parentName = [[process parent] command];
+						return 0;
+					}
+				}
+				
+			}
+		}
+		return 1;	
+	}
+	else {
+		//found processId before, so we just check if the process is there?
+		process = [[AGProcess alloc] initWithProcessIdentifier:processId];
+		if(nil == process)
+		{
+			//can't find the process now
+			NSLog(@"checkStatus can't find daemon pid %d\n", __LINE__);
+			return 1;
+		}
+		else {
+			//re-check the name
+			if ([processName isEqualToString:[process command]]) {
+				return 0;
+			}
+			NSLog(@"checkStatus[%d] pid found, but process name wrong %s \n", __LINE__, [process command]);
+			return 1;
 		}
 	}
-		return 1;	
+	//something wrong?
+	NSLog(@"checkStatus unexpect situation %d\n", __LINE__);
+	return 1;
 }
 
 - (void)errorCheck:(NSTimer*)timerObj {
@@ -231,6 +273,7 @@ NSString * const processName = @"ssh";
 	if([ self checkStatus ] == 1) {
 		
 		[ self setButtonsDisconnected ];
+		[ timerObj  invalidate ];
 		if(bNeedReConnect)
 		{
 			NSLog(@"reconnect now!!\n");
@@ -243,14 +286,8 @@ NSString * const processName = @"ssh";
 			[ alert setInformativeText: @"Check you have entered the settings correctly and that the remote computer is set up correctly" ];
 			[ alert setAlertStyle: NSWarningAlertStyle ];
 			[ alert runModal ];
-			[ timerObj  invalidate ];
 		}
-		
-		
-		
-		
 	}
-
 }
 
 - (void)setButtonsConnected {
