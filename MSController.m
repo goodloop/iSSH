@@ -40,11 +40,12 @@ NSString * const processName = @"ssh";
 - (void)awakeFromNib {
 	bNeedReConnect = false;
 	processId = -1;
+	[ self loadSettings:nil];
+
 	if([ self checkStatus ] == 0) {
 		
 		[ self setButtonsConnected ];
 		[ self startErrorCheck];
-		
 	}
 }
 
