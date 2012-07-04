@@ -595,7 +595,7 @@ AGGetMachTaskEvents(task_t task, int *faults, int *pageins, int *cow_faults, int
 		}
 
 		// extract environment variables from the argument list
-		if (argumentCount >= 0) {
+		if (argumentCount > 0) {
 			// we're using the newer sysctl selector, so use the argument count (less one for the command argument)
 			int i;
 			for (i = [args count] - 1; i >= (argumentCount - 1); i--) {
